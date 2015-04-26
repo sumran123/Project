@@ -1,1 +1,20 @@
-%h1 TRENDS
+-# This file is app/view/trends/index.html.haml
+
+%h1 All Trends
+
+%table#trends
+  %thead
+    %tr
+      %th{:class => @title_}
+        %a{:id => "title_header"}= link_to "Trend Title", trends_path(:column_index => "title"),:sort_by=>"title"
+      %th price
+      %th quantity
+  %tbody
+    - @trends.each do |trend|
+      %tr
+        %td= trend.title
+        %td= trend.price
+        %td= trend.quantity
+        
+
+= link_to 'Add new trend', new_trend_path

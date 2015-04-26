@@ -3,7 +3,7 @@ class TrendsController < ApplicationController
 		@trends = Trend.all
 	end
 	def show
-		 
+		@trend = Trend.find(params[:id]) 
 	end
 	def new
 		 

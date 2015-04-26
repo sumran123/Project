@@ -1,0 +1,15 @@
+-# in app/views/trends/show.html.haml
+
+%h1 Details about #{@trend.title}
+
+%ul#details
+  %li
+    price:
+    = @trend.price
+  %li
+    quantity:
+    = @trend.quantity
+
+
+= link_to 'Edit info', edit_trend_path(@trend)
+= link_to 'Back to trend list', trends_path

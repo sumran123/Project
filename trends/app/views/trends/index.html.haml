@@ -15,6 +15,6 @@
         %td= trend.title
         %td= trend.price
         %td= trend.quantity
-        
+        %td= link_to "more about #{trend.title}", trend_path(trend)
 
-= link_to 'Add new trend', new_trend_path
+=link_to 'Add new trend', new_trend_path

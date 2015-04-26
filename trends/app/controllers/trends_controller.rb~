@@ -1,5 +1,0 @@
-class TrendsController < ApplicationController
-	def show
-		@trend = "sumran"
-	end
-end

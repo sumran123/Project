@@ -1,8 +1,11 @@
 -# in app/views/trends/show.html.haml
 
-%h1 Details about #{@trend.title}
+%h1 Details about #{@trend.trendid}
 
 %ul#details
+  %li
+    title:
+    = @trend.title
   %li
     price:
     = @trend.price

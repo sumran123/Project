@@ -1,0 +1,17 @@
+%h1 Edit existing  Trend
+
+= form_tag trend_path(@trend), :method => :put do
+
+  = label :trend, :title, 'Title'
+  = text_field :trend, 'title'
+
+  = label :trend, :trendid, 'Trendid'
+  = text_field :trend, 'trendid'
+
+  = label :trend, :price, 'Price'
+  = text_field :trend, 'price'
+
+  = label :trend, :quantity, 'Quantity'
+  = text_field :trend, 'quantity' 
+
+  = submit_tag 'Update trend Info'

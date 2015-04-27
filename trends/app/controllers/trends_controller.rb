@@ -9,7 +9,9 @@ class TrendsController < ApplicationController
 		 
 	end
 	def create
-		 
+		  @trend = Trend.create!(trend_params)
+		  flash[:notice] = "#{@trend.trendid} was successfully created."
+		  redirect_to trends_path
 	end
 	def edit
 
@@ -20,5 +22,8 @@ class TrendsController < ApplicationController
 	def destroy
 		 
 	end
-	
+	def trend_params
+		params[:trend].permit(:title, :trendid, :price, :quantity)
+
+	end
 end

@@ -5,6 +5,7 @@
 %table#trends
   %thead
     %tr
+      %th articleid
       %th{:class => @title_}
         %a{:id => "title_header"}= link_to "Trend Title", trends_path(:column_index => "title"),:sort_by=>"title"
       %th price
@@ -12,6 +13,7 @@
   %tbody
     - @trends.each do |trend|
       %tr
+        %td= trend.trendid
         %td= trend.title
         %td= trend.price
         %td= trend.quantity

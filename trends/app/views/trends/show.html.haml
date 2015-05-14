@@ -15,4 +15,5 @@
 
 
 = link_to 'Edit info', edit_trend_path(@trend)
+= button_to 'Delete', trend_path(@trend), :method => :delete, :confirm => 'Are you sure?'
 = link_to 'Back to trend list', trends_path

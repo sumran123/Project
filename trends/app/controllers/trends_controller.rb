@@ -17,6 +17,17 @@ class TrendsController < ApplicationController
 		@trend = Trend.find params[:id]
 
 	end
+	def search
+		# @trend = Trend.find("3")
+		t = Trend.find_by(:trendid =>params[:trendid])
+		if t
+			@trend = t
+		else
+			redirect_to trends_path
+			flash[:notice] = "No record found"
+		end
+
+	end
 	def update
 		@trend = Trend.find params[:id]
 		@trend.update_attributes!(trend_params)

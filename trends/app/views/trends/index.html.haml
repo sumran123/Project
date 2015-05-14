@@ -1,4 +1,8 @@
 -# This file is app/view/trends/index.html.haml
+= form_tag search_trends_path do
+  = text_field_tag :trendid, params[:trendid],:id =>'search_field'
+  = submit_tag 'Search', :name =>nil
+
 
 %h1 All Trends
 
@@ -19,4 +23,6 @@
         %td= trend.quantity
         %td= link_to "more about #{trend.title}", trend_path(trend)
 
-=link_to 'Add new trend', new_trend_path
+= link_to 'Add new trend', new_trend_path 
+
+= link_to 'Search' , search_trends_path

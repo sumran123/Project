@@ -1,0 +1,17 @@
+
+
+
+%h1 Details about #{@trend.trendid}
+
+%ul#details
+  %li
+    title:
+    = @trend.title
+  %li
+    price:
+    = @trend.price
+  %li
+    quantity:
+    = @trend.quantity
+
+= link_to 'Back to trend list', trends_path

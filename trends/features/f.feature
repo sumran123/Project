@@ -6,20 +6,20 @@ I want to be able to search and item given an item code
 Background: Given that there are items in the database
 Given the follwing trends exist:
 
-| trendid | title  | price | quantity |id|
+| trendid | title  | price | quantity |
 
-| 10    |Top    |1200    |28  |1 |
-| 20    |Jeans  |1200    |28  |2 |
-| 30    |hat    |1200    |28  |3 |
-| 40    |slipper|1200    |28  |4 |
-| 50    |socks  |1200    |28  |5 |
+| 10    |Top    |1200    |28  |
+| 20    |Jeans  |1200    |28  |
+| 30    |hat    |1200    |28  |
+| 40    |slipper|1200    |28  |
+| 50    |socks  |1200    |28  |
 
 And  I am on the Trends home page
 
 Scenario: search items by item_code
  
-When I enter the item code "10"
-Then I should see item = "Top"
+When I enter the item code 10
+Then I should see item = Top
 
 When I enter the item code "20" 
 Then I should see item = "Jeans"

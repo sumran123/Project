@@ -9,10 +9,12 @@ Given(/^the follwing trends exist:$/) do |table|
 end
 
 
-When(/^I enter the item code "(.*?)"$/) do |arg1|
-	trend = Trend.find_by(:trendid =>arg1)
+When /^I enter the item code (.*?)$/ do |arg1|
+	# trend = Trend.create!(:trendid =>"1")
+	# assert trend.trendid =~"1" 
+	# assertion for search
 end
 
-Then(/^I should see item = "(.*?)"$/) do |arg1|
-
+Then /^I should see item = (.*?)$/ do |arg1|
+	#assertion for view of the respective search
 end
